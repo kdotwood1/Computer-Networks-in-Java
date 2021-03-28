@@ -1,0 +1,48 @@
+3.3 q2
+Name or service is unknown wgl2 - wgl1
+100% packet loss wgl1 - wgl2
+
+ip address del 192.168.3.200/25 dev eth0 (from WGL2)
+ip route add default via 192.168.3.254 (from WGL2)
+ping WGL1 to check again
+
+q3
+Network is unreachable hlz1 - akl1
+
+
+ip route add default via 192.168.1.254
+
+q4
+Name or service not known hlz2 - hlz1
+/etc/hosts
+192.168.1.100/24	HLZ1
+/etc/resolv.conf
+nameserver 192.168.1.240
+
+q5
+/etc/hosts
+192.168.2.200/24	TRG2
+
+ip addr add 192.168.2.100/24 dev eth0
+ip route add default via 192.168.2.254
+
+/etc/resolv.conf
+nameserver 192.168.1.240
+
+192.168.2.100/24	TRG1
+
+ip addr add 192.168.2.200/24 dev eth0
+ip route add default via 192.168.2.254
+
+/etc/resolv.conf
+nameserver 192.168.1.240
+
+q6
+trg1 - wlg1 ->  tracks to rNPE
+wlg1 - trg1 ->  tracks to rPRL
+
+the last packet is routed to the alphabet
+
+q7
+ip route add 192.168.3.0/24 via 10.5.0.2 dev to_rPRL
+
