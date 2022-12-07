@@ -38,7 +38,7 @@ if [[ ! -e "$TMPDIR" ]]; then
 	echo "Check your permissions on $TMPDIR"
 	exit 1
 fi
-mkdir "$TMPDIR"/pids
+mkdir "$TMPDIR"/pidsAssignment 5Assignment 5
 cp /etc/resolv.conf "$TMPDIR"
 cp /etc/hosts "$TMPDIR"
 
